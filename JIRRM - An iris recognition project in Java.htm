@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>JIRRM - An iris recognition project in Java</title>
+<link rel="stylesheet" href="JIRRM%20-%20An%20iris%20recognition%20project%20in%20Java_files/style.css" type="text/css">
+</head><body>
+<div id="menu">
+<ul><li><a href="http://jirrm.sourceforge.net/index.php">home</a> | <a href="http://sf.net/projects/jirrm/">about</a> | <a href="http://jirrm.sourceforge.net/doc/">documentation</a> | <a href="http://sf.net/project/showfiles.php?group_id=124568">download</a> | <a href="http://sf.net/project/screenshots.php?group_id=124568">screenshots</a> | <a href="http://sf.net/tracker/?group_id=124568&amp;atid=699978">support</a></li></ul>
+
+</div>
+
+<div class="content">
+<p><strong>JIRRM</strong> is an open source iris recognition software
+package written in Java. It comes with a single backend library and
+several front ends, obtainable as a single package or separately.
+</p><p>
+We are currently working on developing the main library and new ways to integrate the technology with existing software.</p>
+<p>Overview of backend design:<br><br><a href="http://jirrm.sourceforge.net/images/overview.png"><img src="JIRRM%20-%20An%20iris%20recognition%20project%20in%20Java_files/overview.png" width="300"></a></p>
+<p><strong>Segmentation:</strong><br><br>
+Done: The image is cleaned up and a circular Hough transform is used to isolate the inner and outer iris boundaries.<br>Todo:
+Advance the algorithm to ensure the inner boundary is within 20-90% of
+the outer boundary. Automatically choose the iris and pupil boundary
+radii.
+</p>
+<p><strong>Normalisation and feature encoding:</strong><br><br>
+Done: Basic rubber mapping. Need to account for pupil and iris boundaries not being quite concentric.<br>Todo:
+Fully implement rubber sheet mapping - converting the disc of the iris
+to a rectangular matrix. Remove occlusions - the eyelashes, the
+eyelids, specular reflections.</p>
+<p><strong>Matching:</strong><br><br>
+Done: Planning.<br>
+Todo: Extract an iriscode which maximises differences. Perhaps using
+Principle Components Analysis, or potentially a choice of several
+algorithms.</p>
+<p><strong>Front ends to the project:</strong><br><br>
+We have a limited SWT frontend. It needs much development, some of
+which is likely to take place as backend development and testing
+occurs. There is scope to develop third party plugins, eg. for xlock.</p>
+<a href="http://sourceforge.net/donate/index.php?group_id=124568"><img src="JIRRM%20-%20An%20iris%20recognition%20project%20in%20Java_files/project-support.jpg" alt="donate" style="padding: 5px 10px;"></a>
+</div>
+
+<div class="footer">
+<p><a href="http://jirrm.sf.net/">jirrm</a></p>
+</div>
+</body></html>
